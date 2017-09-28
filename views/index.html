@@ -1,10 +1,10 @@
 
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>File Metadata Microservice</title>
-    <meta name="description" content="File Metadata Microservice">
+    <meta name="description" content="A File Metadata Microservice">
+    <link id="favicon" rel="icon" href="#" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,8 +13,39 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <div class ="container-fluid">
-        <div id="application"></div>
+      <div class ="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center" id="instructions">
+            <h1>File Metadata Microservice</h1>
+            <h3>User Stories</h3>
+            <ol class="list-group">
+                <li class="list-group-item">I can submit a FormData object that includes a file upload.</li>
+                <li class="list-group-item"> When I submit something, I will receive the file size in bytes within the JSON response.</li>
+            </ol>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><strong>Example Input</strong></h3>
+                </div>
+                <div class="panel-body">
+                  <form enctype="multipart/form-data" action="fileupload" method="post" target="_blank">
+                    <label class="btn btn-default btn-file">
+                        Select File <input type="file" id="up" name="filetoupload" style="display: none;">
+                    </label>
+                    <label id="nameholder"></label>
+                    <input type="submit" class="btn btn-danger">
+                  </form>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><strong>Example Output</strong></h3>
+                </div>
+                <div class="panel-body">
+                  <p class="usage"><strong>{name: "package.json",size: 606}</strong></p>
+                </div>
+                </div>
+              </div>
+          </div>
         <div class="row">
           <div class="col-md-12 text-center" id="info">
             Coded by <a href="https://www.freecodecamp.com/dereje1" target="_blank">DGetahun</a>
